@@ -9,6 +9,7 @@ namespace Application\Controller\Health;
 
 
 use Zend\Mvc\Controller\AbstractActionController;
+use Zend\View\Model\JsonModel;
 use ZF\Hal\Entity;
 use ZF\Hal\View\HalJsonModel;
 
@@ -22,7 +23,7 @@ class HealthController extends AbstractActionController
 
         $hal = new Entity($entity, 'd');
 
-        return $hal;
+        return new JsonModel();
     }
 
 }

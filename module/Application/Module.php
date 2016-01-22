@@ -37,18 +37,18 @@ class Module implements ConfigProviderInterface, BootstrapListenerInterface
             $moduleRouteListener = new ModuleRouteListener();
             $moduleRouteListener->attach($eventManager);
 
-            $events = $e->getTarget()->getEventManager();
-            $events->attach(MvcEvent::EVENT_RENDER, function (MvcEvent $event) {
-
-                if (!$event->isError()) {
-                    return;
-                }
-                $currentModel = $event->getResult();
-
-                $exception  = $currentModel->getVariable('exception');
-                $event->setViewModel(new HalJsonModel(['e' => $exception->getMessage()]));
-                $event->setResult(new HalJsonModel(['e' => $exception->getMessage()]));
-            });
+//            $events = $e->getTarget()->getEventManager();
+//            $events->attach(MvcEvent::EVENT_RENDER, function (MvcEvent $event) {
+//
+//                if (!$event->isError()) {
+//                    return;
+//                }
+//                $currentModel = $event->getResult();
+//
+//                $exception  = $currentModel->getVariable('exception');
+//                $event->setViewModel(new HalJsonModel(['e' => $exception->getMessage()]));
+//                $event->setResult(new HalJsonModel(['e' => $exception->getMessage()]));
+//            });
         }
 
 
