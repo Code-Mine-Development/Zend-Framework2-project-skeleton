@@ -5,4 +5,5 @@ return [
     'ZF\Hal',
     'ZF\ApiProblem',
     'ZF\DevelopmentMode',
+    'CodeMine\CommandQueryGenerator'
 ];
