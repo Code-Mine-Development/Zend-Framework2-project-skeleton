@@ -1,8 +1,0 @@
-service_manager:
-  abstract_factories:
-    - Zend\Cache\Service\StorageCacheAbstractServiceFactory
-    - Zend\Log\LoggerAbstractServiceFactory
-zf-hal:
-  metadata_map:
-    stdClass:
-      route_name: applicatin.health

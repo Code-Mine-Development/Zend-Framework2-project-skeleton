@@ -11,5 +11,36 @@
  * credentials from accidentally being committed into version control.
  */
 
-return array(
-);
+return [
+    'db'              => [
+        'driver'   => 'Pgsql',
+        'dsn'      => sprintf('pgsql:dbname=%s;host=%s', $_SERVER['DB_DATABASE'], $_SERVER['DB_HOST']),
+        'username' => $_SERVER['DB_USERNAME'],
+        'password' => $_SERVER['DB_PASSWORD'],
+        'adapters' => [
+            'PostgreSQL' => [
+                'database' => $_SERVER['DB_DATABASE'],
+                'driver'   => 'Pgsql',
+                'hostname' => $_SERVER['DB_HOST'],
+                'username' => $_SERVER['DB_USERNAME'],
+                'password' => $_SERVER['DB_PASSWORD'],
+                'dsn'      => sprintf('pgsql:dbname=%s;host=%s', $_SERVER['DB_DATABASE'], $_SERVER['DB_HOST']),
+            ],
+        ],
+    ],
+    'service_manager' => [
+        'factories' => [
+            'Zend\\Db\\Adapter\\Adapter' => 'Zend\\Db\\Adapter\\AdapterServiceFactory',
+        ],
+    ],
+    'zf-mvc-auth'     => [
+        'authentication' => [
+            'adapters' => [
+
+            ],
+        ],
+    ],
+    'rollbar' => [
+        'environment' => 'local'
+    ]
+];

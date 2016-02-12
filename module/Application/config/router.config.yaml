@@ -1,9 +1,0 @@
-router:
-  routes:
-    application.health:
-      type: Literal
-      options:
-        route: "/"
-        defaults:
-          controller: Application\Controller\Health
-          action: handle

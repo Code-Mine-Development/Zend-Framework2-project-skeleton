@@ -1,3 +1,0 @@
-controllers:
-  invokables:
-    Application\Controller\Health: Application\Controller\Health\HealthController
