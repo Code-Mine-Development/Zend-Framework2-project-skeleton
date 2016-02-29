@@ -8,38 +8,47 @@
 
 namespace Infrastructure\Repository;
 
+use Infrastructure\Dao\LanguageDaoInterface;
 use Infrastructure\Repository\AbstractRepository;
+use Language\Language;
 use ValueObjects\StringLiteral\StringLiteral;
-
 class LanguageRepository
 {
 
     /**
-     * @var \PDO
+     * @var LanguageDaoInterface
      */
-    private $pdo;
+    private $languageDao;
 
     /**
      * LanguageRepository constructor.
      */
     public function __construct(array $config)
     {
-        $this->pdo = NULL;
+        // config[0] instanceof LagnugaeDaoInterrface
+
+        $this->languageDao = $config[0];
     }
 
     public function findByLanguageCode(StringLiteral $lngCode)
     {
-       $statement =  $this->pdo->prepare('SELECT pole FROM tablica_o_ktorej_jeszcze_nic_nie_wiemy WHERE keyID=:lngCode');
+//      $statement =  $this->pdo->prepare('SELECT pole FROM tablica_o_ktorej_jeszcze_nic_nie_wiemy WHERE keyID=:lngCode');
+//
+//        $result = $statement->execute([
+//            ':lngCode' => $lngCode->toNative()
+//        ]);
+//
+//        return $result;
 
-        $result = $statement->execute([
-            ':lngCode' => $lngCode->toNative()
-        ]);
+        $result = $this->languageDao->findByLanguageCode($lngCode);
 
-        return $result;
+        $language = new Language($result->languageCode, $result->translations);
+
+        return $language;
     }
 
-    public function save()
+    public function save(Language $language)
     {
-
+        $this->languageDao->insert($language->getLanguageCode(), $language->getTranslations());
     }
 }

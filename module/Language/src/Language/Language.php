@@ -34,10 +34,15 @@ class Language
      * @param StringLiteral $word
      * @param StringLiteral $translation
      */
-    public function addTranslation(StringLiteral $word, StringLiteral $translation) : void
+    public function addTranslation(StringLiteral $word, StringLiteral $translation)
     {
         $this->validateData($word->toNative(), $translation->toNative());
         array_push($this->translations, [$word->toNative() => $translation->toNative()]);
+    }
+
+    public function getLanguageCode()
+    {
+        return $this->languageCode;
     }
 
     /**
