@@ -1,0 +1,1 @@
+{"virtualbox":{"/var/www":{"owner":"www-data","group":"www-data","guestpath":"/var/www","hostpath":"/Users/mariusz/PhpstormProjects/API/zf-skeleton","disabled":false,"__vagrantfile":true},"/vagrant":{"owner":"root","group":"root","guestpath":"/vagrant","hostpath":"/Users/mariusz/PhpstormProjects/API/zf-skeleton","disabled":false,"__vagrantfile":true}}}

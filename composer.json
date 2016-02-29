@@ -38,14 +38,16 @@
     "rollbar/rollbar": "~0.9",
     "aws/aws-sdk-php-zf2": "~2.0",
     "code-mine/zf-tactician-comandquery": "1.1.*",
-    "sensiolabs/security-checker": "3.0.*"
+    "sensiolabs/security-checker": "3.0.*",
+    "respect/validation": "^1.0"
   },
   "require-dev": {
     "zendframework/zftool": "dev-master",
     "zendframework/zend-developer-tools": "dev-master",
     "zfcampus/zf-apigility-admin": "^1.4.1",
     "zfcampus/zf-deploy": "~1.0",
-    "code-mine/zf-tactician-comandquery-generator": "1.2.*"
+    "code-mine/zf-tactician-comandquery-generator": "1.2.*",
+    "phpunit/phpunit": "5.1.2"
   },
   "suggest": {
     "zfcampus/zf-apigility-doctrine": "zfcampus/zf-apigility-doctrine ~1.0 to create Doctrine-Connected REST services",
@@ -55,7 +57,13 @@
   "autoload": {
     "psr-4": {
       "Application\\": "module/Application/src/Application",
-      "Infrastructure\\": "module/Infrastructure/src/Infrastructure"
+      "Infrastructure\\": "module/Infrastructure/src/Infrastructure",
+      "Language\\": "module/Language/src/Language"
+    }
+  },
+  "autoload-dev": {
+    "psr-4": {
+      "Language\\": "module/Language/test/Language"
     }
   },
   "repositories": [

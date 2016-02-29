@@ -1,0 +1,43 @@
+ <!--
+          ~ This file is part of software package designed and created
+          ~ by Code Mine Sp. z o.o. for TNN Finance S.A.
+          ~
+          ~ Copyright (c) 2016. Code Mine Sp. z o.o.
+          ~
+          ~ All Rights Reserved.
+          ~
+          ~ NOTICE:  All information contained herein is, and remains
+          ~ the property of Code Mine Sp. z o.o.
+          ~ The intellectual and technical concepts contained
+          ~ herein are proprietary to Code Mine Sp. z o.o. and are protected
+          ~ by trade secret or copyright law. Dissemination of this information
+          ~ or reproduction of this material is strictly forbidden unless prior
+          ~ written permission is obtained from Code Mine Sp. z o.o.
+          ~
+          ~
+          ~
+          -->
+<phpunit
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+xsi:noNamespaceSchemaLocation="http://schema.phpunit.de/5.1/phpunit.xsd"
+forceCoversAnnotation="true"
+verbose="true"
+bootstrap="module/language/test/bootstrap.php"
+colors="true"
+columns="80"
+beStrictAboutOutputDuringTests="true"
+beStrictAboutTestsThatDoNotTestAnything="true"
+beStrictAboutResourceUsageDuringSmallTests="true"
+beStrictAboutTodoAnnotatedTests="true"
+>
+<testsuites>
+    <testsuite name="Language Unit Test Suite">
+        <directory>module/Language/test/Language/</directory>
+    </testsuite>
+</testsuites>
+<filter>
+    <whitelist processUncoveredFilesFromWhitelist="true">
+        <directory suffix=".php">module/Language/src/Language/</directory>
+    </whitelist>
+</filter>
+</phpunit>

@@ -26,5 +26,4 @@ return array(
     'ZfSimpleMigrations',
     'Infrastructure',
     'Api',
-    'Translation',
 );
