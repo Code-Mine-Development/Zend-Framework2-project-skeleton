@@ -2,7 +2,6 @@
   "name": "code-mine/zf-skeleton",
   "description": "Skeleton Application",
   "type": "library",
-  "license": "BSD-3-Clause",
   "keywords": [
     "api",
     "apigility",
@@ -11,6 +10,7 @@
   ],
   "homepage": "http://code-mine.com/",
   "config": {
+    "secure-http": false,
     "process-timeout": 5000,
     "github-oauth": {
       "github.com": "c839cc2caceece687ff8392f26a6b23ca055164c"
@@ -24,6 +24,7 @@
   },
   "require": {
     "php": ">=5.5",
+    "zendframework/zend-mvc": "2.6.*",
     "zendframework/zend-log": "2.6.*",
     "zendframework/zend-cache": "~2.5.3",
     "zfcampus/zf-apigility": "~1.2.1",
@@ -38,7 +39,8 @@
     "rollbar/rollbar": "~0.9",
     "aws/aws-sdk-php-zf2": "~2.0",
     "code-mine/zf-tactician-comandquery": "1.1.*",
-    "sensiolabs/security-checker": "3.0.*"
+    "sensiolabs/security-checker": "3.0.*",
+    "code-mine/tnn-ep-sdk": "dev-master"
   },
   "require-dev": {
     "zendframework/zftool": "dev-master",

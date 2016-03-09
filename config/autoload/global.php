@@ -1,10 +1,16 @@
 <?php
-return array(
-    'router'          => array(
-        'routes' => array(
+return [
+    
+    'migrations'      => [
+        'default' => [
+            'prefix'    => '',
+        ],
+    ],
+    'router'          => [
+        'routes' => [
 
-        ),
-    ),
+        ],
+    ],
     'db'              => [
         'driver'   => 'Pdo',
         'database' => getenv('DB_DATABASE'),
@@ -23,28 +29,28 @@ return array(
             ],
         ],
     ],
-    'service_manager' => array(
-        'factories' => array(
+    'service_manager' => [
+        'factories' => [
             'Zend\\Db\\Adapter\\Adapter' => 'Zend\\Db\\Adapter\\AdapterServiceFactory',
-        ),
-    ),
-    'zf-oauth2'       => array(
-        'options' => array(
+        ],
+    ],
+    'zf-oauth2'       => [
+        'options' => [
             'always_issue_new_refresh_token' => TRUE,
-        ),
-    ),
-    'zf-mvc-auth'     => array(
-        'authentication' => array(
-            'map'      => array(
+        ],
+    ],
+    'zf-mvc-auth'     => [
+        'authentication' => [
+            'map'      => [
                 'Api\\V1' => 'postgresql',
-            ),
+            ],
             'adapters' => [
 
             ],
-        ),
-    ),
-    'rollbar'         => array(
+        ],
+    ],
+    'rollbar'         => [
         'access_token' => getenv('ROLLBAR_TOKEN'),
         'environment'  => 'production',
-    ),
-);
+    ],
+];

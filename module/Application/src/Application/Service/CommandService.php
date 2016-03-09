@@ -9,8 +9,8 @@
 namespace Application\Service;
 
 
-use Application\CommandQueryInputFilterAwareInterface;
-use Application\CommandQueryInterface;
+use CodeMine\CommandQuery\CommandQueryInputFilterAwareInterface;
+use CodeMine\CommandQuery\CommandQueryInterface;
 use Zend\InputFilter\InputFilter;
 use Zend\InputFilter\InputFilterPluginManager;
 

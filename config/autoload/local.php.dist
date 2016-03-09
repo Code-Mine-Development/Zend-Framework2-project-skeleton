@@ -13,7 +13,7 @@
 
 return [
     'db'              => [
-        'driver'   => 'Pgsql',
+        'driver'   => 'Pdo',
         'dsn'      => sprintf('pgsql:dbname=%s;host=%s', $_SERVER['DB_DATABASE'], $_SERVER['DB_HOST']),
         'username' => $_SERVER['DB_USERNAME'],
         'password' => $_SERVER['DB_PASSWORD'],
