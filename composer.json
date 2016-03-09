@@ -1,25 +1,12 @@
 {
   "name": "code-mine/zf-skeleton",
   "description": "Skeleton Application",
-  "type": "library",
-  "keywords": [
-    "api",
-    "apigility",
-    "framework",
-    "zf2"
-  ],
   "homepage": "http://code-mine.com/",
   "config": {
     "secure-http": false,
     "process-timeout": 5000,
     "github-oauth": {
       "github.com": "c839cc2caceece687ff8392f26a6b23ca055164c"
-    }
-  },
-  "extra": {
-    "branch-alias": {
-      "dev-master": "1.3-dev",
-      "dev-develop": "1.4-dev"
     }
   },
   "require": {
@@ -49,11 +36,6 @@
     "zfcampus/zf-deploy": "~1.0",
     "code-mine/zf-tactician-comandquery-generator": "1.2.*"
   },
-  "suggest": {
-    "zfcampus/zf-apigility-doctrine": "zfcampus/zf-apigility-doctrine ~1.0 to create Doctrine-Connected REST services",
-    "zfcampus/zf-http-cache": "zfcampus/zf-http-cache ~1.0 to add HTTP caching to your API",
-    "zfr/zfr-cors": "zfr/zfr-cors ~1.2 to add CORS support to your API"
-  },
   "autoload": {
     "psr-4": {
       "Application\\": "module/Application/src/Application",
@@ -61,10 +43,6 @@
     }
   },
   "repositories": [
-    {
-      "type": "git",
-      "url": "https://github.com/AdamiecRadek/ZfSimpleMigrations"
-    },
     {
       "type": "composer",
       "url": "http://composer.code-mine.com"
