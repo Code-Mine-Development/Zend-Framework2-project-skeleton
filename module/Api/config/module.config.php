@@ -8,7 +8,6 @@ return array(
     'service_manager' => array(
         'factories' => array(
             'Api\\V1\\Rest\\UpdateDispatcher' => 'Api\\V1\\Rest\\UpdateDispatcherFactory',
-            'Api\\V1\\Rest\\Balance\\BalanceResource' => 'Api\\V1\\Rest\\Balance\\BalanceResourceFactory',
         ),
     ),
     'router' => array(
@@ -23,51 +22,17 @@ return array(
                     ),
                 ),
             ),
-            'api.rest.balance' => array(
-                'type' => 'Segment',
-                'options' => array(
-                    'route' => '/balance[/:balance_id]',
-                    'defaults' => array(
-                        'controller' => 'Api\\V1\\Rest\\Balance\\Controller',
-                    ),
-                ),
-            ),
         ),
     ),
     'zf-versioning' => array(
         'uri' => array(
             1 => 'api.rpc.health',
-            0 => 'api.rest.balance',
         ),
     ),
-    'zf-rest' => array(
-        'Api\\V1\\Rest\\Balance\\Controller' => array(
-            'listener' => 'Api\\V1\\Rest\\Balance\\BalanceResource',
-            'route_name' => 'api.rest.balance',
-            'route_identifier_name' => 'balance_id',
-            'collection_name' => 'balance',
-            'entity_http_methods' => array(
-                0 => 'GET',
-                1 => 'PATCH',
-                2 => 'PUT',
-                3 => 'DELETE',
-            ),
-            'collection_http_methods' => array(
-                0 => 'GET',
-                1 => 'POST',
-            ),
-            'collection_query_whitelist' => array(),
-            'page_size' => 25,
-            'page_size_param' => null,
-            'entity_class' => 'Api\\V1\\Rest\\Balance\\BalanceEntity',
-            'collection_class' => 'Api\\V1\\Rest\\Balance\\BalanceCollection',
-            'service_name' => 'Balance',
-        ),
-    ),
+    'zf-rest' => array(),
     'zf-content-negotiation' => array(
         'controllers' => array(
             'Api\\V1\\Rpc\\Health\\Controller' => 'Json',
-            'Api\\V1\\Rest\\Balance\\Controller' => 'HalJson',
         ),
         'accept_whitelist' => array(
             'Api\\V1\\Rpc\\Health\\Controller' => array(
@@ -75,38 +40,16 @@ return array(
                 1 => 'application/json',
                 2 => 'application/*+json',
             ),
-            'Api\\V1\\Rest\\Balance\\Controller' => array(
-                0 => 'application/vnd.api.v1+json',
-                1 => 'application/hal+json',
-                2 => 'application/json',
-            ),
         ),
         'content_type_whitelist' => array(
             'Api\\V1\\Rpc\\Health\\Controller' => array(
                 0 => 'application/vnd.api.v1+json',
                 1 => 'application/json',
             ),
-            'Api\\V1\\Rest\\Balance\\Controller' => array(
-                0 => 'application/vnd.api.v1+json',
-                1 => 'application/json',
-            ),
         ),
     ),
     'zf-hal' => array(
-        'metadata_map' => array(
-            'Api\\V1\\Rest\\Balance\\BalanceEntity' => array(
-                'entity_identifier_name' => 'id',
-                'route_name' => 'api.rest.balance',
-                'route_identifier_name' => 'balance_id',
-                'hydrator' => 'Zend\\Hydrator\\ArraySerializable',
-            ),
-            'Api\\V1\\Rest\\Balance\\BalanceCollection' => array(
-                'entity_identifier_name' => 'id',
-                'route_name' => 'api.rest.balance',
-                'route_identifier_name' => 'balance_id',
-                'is_collection' => true,
-            ),
-        ),
+        'metadata_map' => array(),
     ),
     'zf-content-validation' => array(),
     'zf-mvc-auth' => array(
