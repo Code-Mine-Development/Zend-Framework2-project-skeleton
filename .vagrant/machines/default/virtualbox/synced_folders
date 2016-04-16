@@ -1,0 +1,1 @@
+{"virtualbox":{"/var/www":{"owner":"www-data","group":"www-data","guestpath":"/var/www","hostpath":"/home/miszadev/code/IdeaProjects/ABMS-AccountBalanceManagerService","disabled":false},"/vagrant":{"owner":"root","group":"root","guestpath":"/vagrant","hostpath":"/home/miszadev/code/IdeaProjects/ABMS-AccountBalanceManagerService","disabled":false}}}
