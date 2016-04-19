@@ -3,7 +3,7 @@ return [
 
     'migrations'      => [
         'default' => [
-            'prefix'    => '',
+            'prefix' => '',
         ],
     ],
     'router'          => [
@@ -53,4 +53,11 @@ return [
         'access_token' => getenv('ROLLBAR_TOKEN'),
         'environment'  => 'production',
     ],
+    'tnn'             => [
+        'sdk' => [
+            'client' => 'coms',
+            'environment'=>'mock'
+        ],
+    ],
+
 ];

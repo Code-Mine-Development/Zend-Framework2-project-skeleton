@@ -8,6 +8,7 @@ namespace Application;
 
 use Zend\Mvc\ModuleRouteListener;
 use Zend\Mvc\MvcEvent;
+use Zend\Uri\UriFactory;
 
 /**
  * Class Module
@@ -37,6 +38,7 @@ class Module
                 }
             }
         );
+        UriFactory::registerScheme('chrome-extension', 'Zend\Uri\Uri');
     }
 
     /**
