@@ -27,7 +27,8 @@
     "aws/aws-sdk-php-zf2": "~2.0",
     "code-mine/zf-tactician-comandquery": "1.1.*",
     "sensiolabs/security-checker": "3.0.*",
-    "code-mine/tnn-ep-sdk": "dev-master"
+    "code-mine/tnn-ep-sdk": "dev-master",
+    "code-mine/tnn-ep-zf-sdk":"dev-master"
   },
   "require-dev": {
     "zendframework/zftool": "dev-master",
