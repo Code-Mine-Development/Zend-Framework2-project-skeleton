@@ -26,4 +26,5 @@ return array(
     'ZfSimpleMigrations',
     'Infrastructure',
     'Api',
+    'CodeMine\TNN\ZfSDK'
 );
