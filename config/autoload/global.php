@@ -1,6 +1,6 @@
 <?php
 return [
-    
+
     'migrations'      => [
         'default' => [
             'prefix'    => '',
