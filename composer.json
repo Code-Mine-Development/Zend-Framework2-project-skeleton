@@ -47,8 +47,12 @@
   },
   "repositories": [
     {
+      "type": "git",
+      "url": "https://github.com/AdamiecRadek/ZfSimpleMigrations"
+    },
+    {
       "type": "composer",
-      "url": "http://composer.code-mine.com"
+      "url": "http://toran.code-mine.com/repo/private/"
     }
   ]
 }

@@ -26,6 +26,8 @@ return array(
     'ZfSimpleMigrations',
     'Infrastructure',
     'Api',
-    'CodeMine\TNN\ZfSDK',
+    'CodeMine\\TNN\\ZfSDK',
     'CodeMine\\TNN\\UIMSOAuthServer',
+    'Cli',
+    'ZfrCors',
 );
